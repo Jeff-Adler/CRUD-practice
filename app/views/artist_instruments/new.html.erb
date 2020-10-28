@@ -1,1 +1,8 @@
-
+<h1>ArtistInstrument Form</h1>
+<%= form_with model: ArtistInstrument.new do |form|  %>
+  Artist: <%= form.collection_select :artist_id, @artists, :id, :name, include_blank: true  %>
+</br></br>
+Instrument: <%= form.collection_select :instrument_id, @instruments, :id, :name, include_blank: true  %>
+</br></br>
+<%= form.submit %>
+<% end %>

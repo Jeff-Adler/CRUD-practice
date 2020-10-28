@@ -1,0 +1,7 @@
+<h1>ArtistInstruments</h1>
+<ul>
+  <% @artist_instruments.each do |artist_instrument| %>
+    <li><%= link_to artist_instrument.artist.name, artist_path(artist_instrument.artist) %> - <%= link_to artist_instrument.instrument.name, instrument_path(artist_instrument.instrument) %></li>
+  <% end %>
+</ul>
+<%= link_to "New Artist-Instrument Form", new_artist_instrument_path %>
