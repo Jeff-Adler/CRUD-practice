@@ -1,5 +1,5 @@
 <h1>Instrument Form</h1>
 <%= form_with model: Instrument.new do |form| %>
-  <%= form.text_field :name %>
-  <%= form.submit %>
+  <%= form.text_field :name, id: :name %>
+  <%= form.submit "Submit" %>
 <% end %>
