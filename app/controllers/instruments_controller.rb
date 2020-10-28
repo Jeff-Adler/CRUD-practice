@@ -1,5 +1,8 @@
 class InstrumentsController < ApplicationController
+    before_action :instrument, only: [:show, ,:edit, :update, :destroy]
+
     def index 
+        @instruments = Instrument.all
     end
 
     def show
@@ -18,5 +21,15 @@ class InstrumentsController < ApplicationController
     end
 
     def destroy 
+    end
+
+    private
+
+    def instrument_params
+        params.require(:instrument).permit(:name)
+    end
+
+    def find_instrument
+        @instrument = Instrument.find(params[:id])
     end
 end
