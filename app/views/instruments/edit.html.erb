@@ -1,0 +1,5 @@
+<h1>Edit Instrument Page</h1>
+<%= form_with model: @instrument, url: instrument_path(@instrument), method: :patch, local: true, scope: :instrument do |form| %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+<% end %>
