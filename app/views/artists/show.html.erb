@@ -1,6 +1,10 @@
 <h1>Artist Page</h1>
 <%= @artist.name %>
 <br/>
+<% @artist.instruments.each do |instrument| %>
+  <li><%= link_to instrument.name, instrument_path(instrument) %></li>
+<% end %>
+<br/>
 <br/>
 <%= link_to "Edit Artist", edit_artist_path(@artist), method: :get %>
 <br/>
