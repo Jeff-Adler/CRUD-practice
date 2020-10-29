@@ -9,8 +9,8 @@ RSpec.describe 'Deleting an artist-instrument', type: :feature do
     fill_in 'name', with: 'Harmonica'
     click_on 'Submit'
     visit new_artist_instrument_path
-    fill_in 'artist', with: 'Brent'
-    fill_in 'instrument', with: 'Harmonica'
+    select 'Brent', from: 'artist_instrument_artist_id'
+    select 'Harmonica', from: 'artist_instrument_instrument_id'
     click_on 'Submit'
     visit artist_instruments_path
     click_on 'Delete ArtistInstrument'

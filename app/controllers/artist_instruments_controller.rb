@@ -14,6 +14,12 @@ class ArtistInstrumentsController < ApplicationController
         redirect_to artist_instruments_path
     end
 
+    def destroy
+        @artist_instrument = ArtistInstrument.find(params[:id])
+        @artist_instrument.destroy
+        redirect_to artist_instruments_path
+    end
+
     private
 
     def artist_instrument_params
