@@ -1,3 +1,9 @@
+=begin
+
+This is the artist controller
+
+=end
+
 class ArtistsController < ApplicationController
     before_action :find_artist, only: [:show, :edit, :update, :destroy]
 
